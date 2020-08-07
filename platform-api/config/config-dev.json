@@ -1,0 +1,48 @@
+{
+  "apiurl": "http://localhost",
+  "port": "3000",
+  "cors": {
+    "origin": "*"
+  },
+  "mongoose": {
+    "user": "mongo",
+    "password": "9tPf5DmJxBPy",
+    "name": "Platform",
+    "port": "27017"
+  },
+  "sequelize": {
+    "name": "plateform",
+    "host": "postgres",
+    "port": "5432",
+    "user": "postgres",
+    "password": "RtB7xHkCgneT",
+    "option": {
+      "force": false,
+      "loggin": false
+    },
+    "model": {
+      "freezeTableName": true
+    }
+  },
+  "jwt": {
+    "salt": "tooSaltyForU",
+    "sessionLength": "4h"
+  },
+  "constants": {
+    "CREATED": "CREATED",
+    "PAID": "PAID",
+    "FAIL": "FAIL",
+    "REFUND": "REFUND",
+    "PROCESSING": "PROCESSING"
+  },
+  "mercure": {
+    "hostname": "mercure",
+    "port": "80",
+    "path": "/.well-known/mercure",
+    "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJjdXJlIjp7InB1Ymxpc2giOlsiKiJdfX0.obDjwCgqtPuIvwBlTxUEmibbBf0zypKCNzNKP7Op2UM"
+  },
+  "sendinblue": {
+    "apiKey": "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",
+    "overrideEmailTo" : "eliebismuth91@gmail.com"
+  }
+}
