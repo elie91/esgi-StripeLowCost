@@ -24,7 +24,7 @@ const Navbar = ({history}) => {
 
     const handleRemoveMerchant = () => {
         userActions.removeSelectedMerchant()
-        history.push("/")
+        history.replace("/")
     }
 
     return (

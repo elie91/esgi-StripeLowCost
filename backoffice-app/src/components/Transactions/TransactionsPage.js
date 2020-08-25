@@ -17,13 +17,13 @@ const TransactionsPages = () => {
 
     useEffect(() => {
         setDisplayedTransactions(transactions)
-        if (!userSelectors.getSelectedMerchant()) {
+ /*       if (!userSelectors.getSelectedMerchant()) {
             if (userSelectors.getUser().role === "MERCHANT") {
                 userActions.setSelectedMerchant(userSelectors.getUser().merchants[0])
             } else {
                 userActions.setSelectedMerchant(merchantsSelectors.getMerchants()[0])
             }
-        }
+        }*/
     }, [transactions]);
 
     const handleChange = event => {
@@ -39,7 +39,7 @@ const TransactionsPages = () => {
 
     return (
         <div className="container-fluid">
-            <h1 className="h3 mb-4 text-gray-800">Transactions du
+            <h1 className="h3 mb-4 text-gray-800">Transactions
                 marchand {userSelectors.getSelectedMerchant() && userSelectors.getSelectedMerchant().name}</h1>
 
             <div className="input-group my-4">

@@ -186,7 +186,6 @@ module.exports = (app) => {
             )
             .sort({score: {$meta: "textScore"}})
             .exec(function (err, data) {
-                console.log("INNNNNNNNNN", data)
                 return res.json(data)
             })
     }
@@ -201,9 +200,11 @@ module.exports = (app) => {
                 },
             },
         ];
-        if (req.query.merchant) {
-            params = [{$match: {"merchant_id": req.query.merchant}}, ...params]
+        if (req.query.merchant || req.user.merchant_id) {
+            const merchant_id = req.query.merchant || req.user.merchant_id
+            params = [{$match: {"merchant_id": merchant_id.toString()}}, ...params]
         }
+
         TransactionMongoose.aggregate(params,
             function (err, results) {
                 if (err) throw err;
@@ -222,8 +223,9 @@ module.exports = (app) => {
                 },
             },
         ]
-        if (req.query.merchant) {
-            params = [{$match: {"merchant_id": req.query.merchant}}, ...params]
+        if (req.query.merchant || req.user.merchant_id) {
+            const merchant_id = req.query.merchant || req.user.merchant_id
+            params = [{$match: {"merchant_id": merchant_id.toString()}}, ...params]
         }
         TransactionMongoose.aggregate(params,
             function (err, results) {
