@@ -42,7 +42,7 @@
     "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZXJjdXJlIjp7InB1Ymxpc2giOlsiKiJdfX0.obDjwCgqtPuIvwBlTxUEmibbBf0zypKCNzNKP7Op2UM"
   },
   "sendinblue": {
-    "apiKey": "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",
-    "overrideEmailTo" : "eliebismuth91@gmail.com"
+    "apiKey": "API_KEY",
+    "overrideEmailTo" : "EMAIL"
   }
 }
